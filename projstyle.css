@@ -1,0 +1,280 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-weight: 300;
+    opacity:99%;
+    transition:0.3s;
+}
+
+body{ 
+    font-family: LabGrotesque,Helvetica Neue,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+#container{
+    position: relative;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    overflow: auto;
+    height: 100%;
+    width:100%;
+    justify-items: center;
+    z-index: -1;
+
+} 
+#header-slide-menu{
+    opacity: 99%;
+    z-index: 2;
+    
+    position:fixed;
+    width:100%;
+    height:fit-content;
+}
+
+
+h2{
+    font-size: 26px;
+}
+#slide-menu-grid a,.download-button ,#heading-list a{
+    position: relative;
+    top: 5px;
+    margin:18px;
+    font-size: 18px;
+    text-decoration: none;
+    color:#767676;
+    transition: 0.5s ease-in-out;
+   
+}
+#slide-menu-grid a,.download-button a,#heading-list a :visited{
+    color:#767676;
+}
+#slide-menu-grid a,.download-button,#heading-list a:hover{
+    color:black;
+    font-size: 19px;
+    cursor:pointer;
+    
+
+}
+ #video:hover {
+    transform:scale(1.02);
+    box-shadow: 0px 12px 7px 12px rgb(225, 224, 224);;
+    
+}
+
+.download-button:hover{
+     transform:scale(1.05);
+}
+
+#list5 a img:hover{
+    transform:scale(1.2);
+}
+
+
+#header{
+    box-sizing: border-box;
+    height:75px;
+    position:fixed;
+    padding: 20px 70px 20px 70px;
+    
+    display: flex;
+    background-color:white !important;
+    width:100%;
+    justify-content: space-between;
+    
+   
+
+}
+.lobe-logo{
+    text-decoration: none; 
+    display:flex;
+    width: 80px;
+}
+.lobe-logo:visited{
+    color:black;
+}
+
+.lobe-logo div{
+    border-style:none;
+    width: 14px;
+    height:14px;
+    border-radius: 35%;
+    position:relative;
+}
+.logo1{
+    top:3px;
+
+    background-color: #04ddb2;
+    
+}
+.logo2{
+    top:10px;
+    right: 4px;
+    background-color:rgba(255, 75, 75, 0.921);
+    
+
+}
+
+.download-button{
+    position:relative;
+    bottom:5px;
+    width: 129px;
+    height: 48px;
+    background-color: #04ddb2;
+    border-radius: 25px;
+    border-style:none;
+    color: white !important;
+}
+
+.download-button {
+    
+    bottom:3px;
+    top:0px;
+    margin:0px;
+}
+
+#slide-menu-container{
+    display:flex;
+}
+
+#slide-menu{
+    
+    overflow:hidden;
+    width:100%;
+    max-height:0;
+    position:fixed;
+    top:75px;
+    
+    background-color: white;
+    transform: translateY(-5px);
+    opacity: 0%;
+    transition: all 0.6s ;
+}
+
+
+#slide-menu-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+#slide-menu-grid a{
+    margin-top: 25px;
+    margin-left: 25px;
+    font-size: 20px;
+}
+
+#slide-menu-grid button{
+    margin: 35px 25px 50px 25px;
+    width:95%;
+    align-self: center;
+}
+
+
+
+/*
+hamburger button
+*/
+
+:root{
+    --bar-width: 18px;
+    --bar-height: 2px;
+    --burger-gap: 2pt; 
+    --timing: 0.3s ease-in-out;
+    --burger-height: calc((var(--bar-height)*3) + var(--burger-gap)*2 ) 
+}
+.open-button-container{
+    display:none;
+    
+} 
+.open-button input, .open-button::before, .open-button::after {
+    content: " ";
+    position:relative;
+    width: var(--bar-width);
+    background-color: black;
+    border-radius: 10000px;
+    transition: all var(--timing);
+}
+
+.open-button input{
+    appearance: none;
+    height: var(--bar-height);
+    padding:0px;
+    margin: 0px;
+
+}
+.open-button::before{
+    height: 1px;
+}
+
+.open-button::after{
+    height: var(--bar-height);
+    margin-top:1px;
+}
+.open-button{
+   
+    overflow:visible;
+    position:relative;
+    bottom: 5px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: var(--burger-gap);
+    background-color: #eef0f2;
+    height:40px;
+    width:40px;
+    padding: 0px;
+    border-radius: 100%;
+    shape-rendering: crispEdges;
+    cursor: pointer;
+}
+
+.open-button input:checked{
+    opacity: 0%;
+    height: 0px;
+}
+
+.open-button:has(input:checked)::before{
+    height: var(--bar-height);
+    rotate: 45deg;
+    translate: 0 4px;
+}
+
+.open-button:has(input:checked)::after{
+    height: var(--bar-height);
+    rotate: -45deg;
+    translate: 0 -4px;
+}
+
+
+
+
+/* media queries*/
+@media (max-width: 800px){
+    #heading-list,#header .download-button{
+        display:none;  
+    }
+    .open-button{
+       display:flex
+    }    
+}
+@media (min-width: 800px){
+    #slide-menu{
+        display:none;  
+    }
+   
+}
+
+@media (max-width: 1200px){
+    #header{
+        padding: 20px;
+    }
+    #heading-list a{
+        margin-left: 15px;
+        margin-right:15px;
+    }
+    #main h1{
+        font-size: 50px;
+    }
+       
+}
+

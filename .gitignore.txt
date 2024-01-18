@@ -1,0 +1,3 @@
+#ignore my vscode file
+
+.vscode/

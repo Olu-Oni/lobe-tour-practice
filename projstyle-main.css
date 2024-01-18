@@ -1,0 +1,84 @@
+#main h1{
+    align-content:center;
+    margin-top: 45px;
+    font-size: 64px;
+    font-weight: 800;
+    
+}
+#tour-title{
+    color: #04ddb2;
+    
+}
+
+#main p{
+    margin-top: 10px;
+   font-weight: normal ;
+    font-size: 23px;
+   
+}
+
+
+#main{
+    position: relative;
+    top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    margin-bottom: 120px;
+    max-width: 1200px;
+    width:100%;
+    justify-self:center;
+    
+}
+
+#title{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#video-container{
+    position: relative;
+    top:30px;
+    margin: 50px;
+    
+    
+    width:100%;
+   
+}
+
+#video{
+    width:80%;
+    border-radius: 25px;
+    
+}
+#main #title, #main #video, #main p, #main button, #main div {
+    margin: 10px;
+
+}
+
+
+
+#main button{
+    margin-top: 50px;
+    width: 168px;
+    height: 50px;
+    
+}
+
+@media (max-width: 1200px){
+    
+    #main h1{
+        font-size: 50px;
+    }
+
+    #main{
+        
+        max-width: 1050px;
+        
+    }
+       
+}
